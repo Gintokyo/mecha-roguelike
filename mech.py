@@ -8,4 +8,9 @@ class Mech:
         }
 
     def __str__(self):
-        return f"{self.name} -> " + " ".join(f"{k}:{v}" for k, v in self.stats.items())
+        return f"{self.name} -> " + " ".join(f"{k}: {v}" for k, v in self.stats.items())
+
+    def take_damage(self, amount):
+        self.stats["HP"] -= amount
+        if self.stats["HP"] < 0:
+            self.stats["HP"] = 0
