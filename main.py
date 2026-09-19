@@ -8,6 +8,6 @@ print(my_mech)
 
 heavy_chassis = Part("Heavy Chassis", "Body", {"HP": 20, "DEF": 10})
 
-print(heavy_chassis.name)
-print(heavy_chassis.part_type)
-print(heavy_chassis.stats)
+print(heavy_chassis)
+# Code a better output
+print(heavy_chassis.apply_to(my_mech))
