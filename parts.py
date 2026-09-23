@@ -13,4 +13,5 @@ class Part:
     def apply_to(self, mech):
         for k, v in self.stats.items():
             mech.stats[k] += v
-            return mech.stats
+            if k == "MAX_HP":
+                mech.stats["HP"] += v
