@@ -26,5 +26,11 @@ class Mech:
     # Equipping parts
     # self refers to what appears before the function i.e. my_mech.equip_part -> my_mech is self
     def equip_part(self, part):
-        part.apply_to(self)
-        self.parts.append(part)
+        for p in self.parts:
+            if p.part_type == part.part_type:
+                print(f"{part.part_type} already equipped")
+                # The break here and the else out of the for loop allows p.part_type to check after the first argument only i.e. if we have 'Body', 'Arm' it will not stop at 'Body' and then finish the loop.
+                break
+        else:
+            part.apply_to(self)
+            self.parts.append(part)
