@@ -8,8 +8,6 @@ print(my_mech)
 
 heavy_chassis = Part("Heavy Chassis", "Body", {"MAX_HP": 20, "DEF": 10})
 
-print(heavy_chassis)
-# Code a better output
-heavy_chassis.apply_to(my_mech)
-heavy_chassis.apply_to(my_mech)
+#print(heavy_chassis)
+my_mech.equip_part(heavy_chassis)
 print(my_mech)
